@@ -21,8 +21,6 @@ public class InMemoryDataStorage implements UserDataStore, RoleDataStore{
 
     @Override
     public boolean checkUserExists(String userName) {
-        System.out.println(userName);
-        System.out.println(users.stream().anyMatch(x -> x.getUsername().equals(userName)));
         return users.stream().anyMatch(x -> x.getUsername().equals(userName));
     }
 

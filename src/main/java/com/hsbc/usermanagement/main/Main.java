@@ -21,19 +21,6 @@ public class Main {
     public InMemoryDataStorage dataStorage = new InMemoryDataStorage();
     public static void main(String[] args) throws Exception {
 
-        Main main = new Main();
-        main.createRole("Admin");
-        main.createRole("SecAdmin");
-        main.createRole("Auditor");
-
-        main.createUser("User1", "User@123");
-
-        main.addRoleToUser("User1", "Admin");
-
-        String token = main.authenticate("User1", "User@123");
-
-        Boolean roleExists = main.checkRole("Admin1", token);
-        System.out.println(roleExists);
     }
 
     public User getUser(String userName) {
